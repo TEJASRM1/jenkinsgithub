@@ -3,22 +3,22 @@ pipeline {
     stages {
 
     parallel {
-       stage('one') {
-           steps {
-	   agent{label 'labelone'}
-           echo 'Hello label ONE'
+       stage('stageone') {
+	    agent{label 'labelone'}
+            steps {
+                echo 'Hello label ONE'
             }
         }
      }
 
-        stage('one') {
-           steps {
-	   agent{label 'labelone'}
-           echo 'Hello label ONE'
+        stage('stagetwo') {
+	    agent{label 'labeltwo'}
+            steps {
+                echo 'Hello label TWO'
             }
         }
      }
 
    }
-
+}
 
