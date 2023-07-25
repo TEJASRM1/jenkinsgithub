@@ -1,10 +1,19 @@
+
 pipeline {
-    agent any
+    agent none
 
     stages {
-        stage('Hello') {
+        stage('one') {
             steps {
-                echo 'Hello World Again'
+                agent{label 'labelone'}
+                echo 'label ONE'
+            }
+        }
+
+        stage('two') {
+            steps {
+                agent{label 'labeltwo'}
+                echo 'label TWO'
             }
         }
     }
