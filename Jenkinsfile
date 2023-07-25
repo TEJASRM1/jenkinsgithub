@@ -11,7 +11,7 @@ stage("parallelpipe")
                 echo 'Hello label ONE'
             }
         }
-     }
+     
 
         stage("two") {
 	    agent{label 'labeltwo'}
@@ -21,5 +21,5 @@ stage("parallelpipe")
         }
      }
    }
-
-   }
+}
+}
